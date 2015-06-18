@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<title>Visitor viewing statistics</title>
+	<link rel="stylesheet"
+	      type="text/css"
+	      href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+	<table>
+	<tr>
+		<th>Description</th>
+		<th>Viewing count</th>
+	</tr>
+	{% for item in stat %}
+	<tr>
+		<td>{{ item[0] }}</td>
+		<td>{{ item[1] }}</td>
+	</tr>
+	{% endfor %}
+	</table>
+</body>
+</html>
